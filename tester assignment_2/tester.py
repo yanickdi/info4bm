@@ -30,6 +30,9 @@ def check_csv_file(filename):
                 wrong_vals = wrong_csv.read().split(',')
                 if len(right_vals) != len(wrong_vals):
                     print('    {} anstatt {} Werte gefunden'.format(len(wrong_vals), len(right_vals)))
+                    if len(wrong_vals) == len(right_vals)+1:
+                        if right_vals == wrong_vals[:-1]:
+                            print("     aber: Bis auf den letzten Wert '{}' stimmt alles".format(wrong_vals[-1]))
                 else:
                     print('    Anzahl der Werte ist korrekt')
                     for i, vals in enumerate(zip(right_vals, wrong_vals)):
