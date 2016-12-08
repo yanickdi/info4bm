@@ -34,7 +34,7 @@ def check_csv_file(filename):
                     print('    Anzahl der Werte ist korrekt')
                     for i, vals in enumerate(zip(right_vals, wrong_vals)):
                         if vals[0] != vals[1]:
-                            print('index {}: {} statt {}'.format(i, vals[0], vals[1]))
+                            print("index {}: '{}' statt '{}'".format(i, vals[0], vals[1]))
             except:
                 try:
                     print('   Kann CSV Datei nicht parsen, zeige diff:')
