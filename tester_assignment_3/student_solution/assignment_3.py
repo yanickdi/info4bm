@@ -1,0 +1,1 @@
+print('Die Datei assignment_3.py im Ordner student_solution ersetzen!')
